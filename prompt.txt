@@ -1,0 +1,39 @@
+You are building a simple voice-controlled desktop assistant for Windows.
+
+The assistant will:
+- Continuously listen to the microphone.
+- Recognize specific spoken commands like:
+  - "computer speaker on"
+  - "computer give me a therapy"
+- Respond to commands by:
+  - Playing sound files (e.g., MP3s) via the default speaker (eventually Bluetooth).
+  - Looking up and selecting files using a local CSV (e.g., therapy sounds listed by category).
+- Be simple enough for a beginner programmer to understand and modify.
+
+Project requirements:
+- Language: Python 3
+- Tools/libraries:
+  - `speech_recognition` for voice input.
+  - `playsound` for audio playback.
+  - `csv` for reading local lookup tables.
+  - (Optional) `pyttsx3` for text-to-speech responses later.
+- The code should be clear and beginner-friendly, with comments explaining key steps.
+- The app should run in a loop: listen, understand, respond.
+
+Folder structure:
+- `main.py` — the main program loop.
+- `therapies.csv` — a file listing therapy sounds by type.
+- `sounds/` — folder to store sound files.
+
+Example therapy CSV format:
+type,filename  
+calm,sounds/calm1.mp3  
+funny,sounds/funny1.mp3
+
+Stretch goals (optional):
+- Let the user say "computer play [filename]" and play that file if it exists.
+- Switch output to Bluetooth speakers using OS settings (platform-dependent).
+- Add voice feedback using `pyttsx3`.
+
+The system does not need a graphical interface, just terminal output for now.
+Start with a working prototype that listens for two commands and plays one file.
