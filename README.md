@@ -13,10 +13,26 @@ A simple voice-controlled desktop assistant for Windows that listens to spoken c
 ## Supported Commands
 
 - `"computer speaker on"` - Test your speakers
-- `"computer give me a therapy"` - Play a therapy sound (defaults to calm)
+- `"computer give me a therapy"` - **NEW SYSTEM**: Plays digit sequence + random 4-digit therapy file
 - `"computer give me [type]"` - Play specific therapy type (calm, funny, meditation, etc.)
 - `"computer play [filename]"` - Play a specific file from the sounds folder
 - `"exit"` or `"quit"` - Stop the assistant
+
+### NEW: Therapy Sequence System
+
+When you say **"computer give me a therapy"**, the assistant now:
+
+1. **Finds all 4-digit WAV files** in the sounds folder (e.g., `1234.wav`, `1111.wav`)
+2. **Randomly selects one** therapy file
+3. **Plays prefix sounds** based on each digit:
+   - **1** = `boom.wav` (low tone)
+   - **2** = `zap.wav` (high tone) 
+   - **3** = `honk.wav` (mid tone)
+   - **4** = `moo.wav` (very low tone)
+4. **Plays the main therapy file**
+
+**Example**: If `1234.wav` is selected:
+- Plays: `boom.wav` → `zap.wav` → `honk.wav` → `moo.wav` → `1234.wav`
 
 ## Installation
 

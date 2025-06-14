@@ -1,4 +1,8 @@
 SpeechRecognition
 pygame
 pyaudio
-pyttsx3 
+pyttsx3
+pandas
+openpyxl
+requests
+numpy 
